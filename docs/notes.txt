@@ -1,0 +1,7 @@
+Parsers:
+	When view value changes, parse and then update model value
+
+Validators:
+	Model value changes
+	Validator is called with most updated model value
+	Whenever model value changes, validate it and return undefined if failure

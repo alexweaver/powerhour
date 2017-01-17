@@ -1,0 +1,82 @@
+Front end input validation
+Back end input validation
+Front end error handling
+Back end error handling
+
+Styling
+
+Create page to view your lists
+Remake the player page
+Code clean up
+	- Refactor all DOM logic into directives
+	- Refactor all request logic into services
+File organization
+	- Deleting unused files and references to them
+Nail down request/response schemas
+Establish cases for API Calls, i.e. is /playlists going to return playlist details, a user's playlists or nothing depending on parameters? or are these different requests?
+	- Standardize easy way to distinguish types of requests if they're all going to the same place
+Refactor variables into objects
+	- Mainly talking about $scope.playlistData, make this into an object with a constructor
+
+Workflow:
+	View begins to render
+	View prepares data for get requests
+	View begins making calls to the api
+	Api does integrity checking on request data
+	Api does retrieval and/or processing
+	Api transforms response data
+	On success, view transforms this data into it's usable form
+	View renders
+	When making a request, view transforms data into request object
+	Makes request
+	Api transforms request data, processes, transforms response and replies
+	Transforms response in same way as usual response data
+
+Does it make sense to have both ends transforming data to refer to the other one?
+Kinda because you want to transfer just the necessary information
+
+Here's an idea: Define what the "client version" of every entity should look like, see if there's a common one (kinda what serialize is supposed to be doing i guess)
+
+Client should also be allowed to run validation on data coming from client
+
+Eventually, client shouldn't need to transform any data coming from server, just check that it's all there!
+
+Client will still transform data for REQUESTS so that needless information doesn't confuse the server, but for the client the more data the better right?
+
+Client incoming schemas:
+	Should be standard per entity i would think
+	Therefore make validation method for every entity type, also maybe object representation of every entity type
+
+Server incoming scheams should be per request type typically
+	Make validation for every request type
+	Might be easier then to separate even closely related requests into multiple handlers
+
+Responses from server should also have some more intuitive way of expressing failure or not found results
+	Like if i'm checking the current user and none is found, what should the response look like? Right now just checking if username is there but that feels gross
+
+Pick something of this to work on! :D
+
+--------------
+
+Export function
+Playlist search
+
+
+Option 1:
+
+Get clips
+Client fetches youtube data
+CLient renders
+Server gets youtube data
+Server returns
+Server version replaces client version
+
+Option 2:
+Server gets youtube data
+Server returns
+Server version replaces client version
+
+Option 3:
+Client gets youtube data
+Client sends youtube data to server
+Server returns with it's ok

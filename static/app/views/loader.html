@@ -1,0 +1,10 @@
+<script src="http://www.youtube.com/player_api" text="text/javascript"></script>
+
+<div main-nav></div>
+<div ng-show="render">
+
+	<select ng-model="selectedPlaylist" ng-options="playlist.title for playlist in playlists"></select>
+	Shuffle <input ng-model="shuffle" type="checkbox"></input>
+	<button ng-click="play()">Play</button>
+	<player mix="mix" shuffle="shuffle" index="index" id="player"></player>
+</div>

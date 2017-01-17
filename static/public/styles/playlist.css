@@ -1,0 +1,328 @@
+#title-input {
+	width: 600px;
+	height: 80px;
+	border: 0px;
+	font-size: 30px;
+	text-align: left !important;
+	color: white;
+	background-color: black;
+	font-weight: bold;
+}
+
+#title-input:focus {
+	outline: 0px;
+}
+
+body {
+	background-color: black;
+}
+
+#save-button {
+	float: right;
+}
+
+#link-area {
+	margin-left: 15px;
+	width: 420px;
+	resize: none;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	padding-left: 10px
+}
+
+ul#songList
+{
+	padding-left: 0px;
+    list-style-type: none;
+    width: 700px;
+    float: right;
+    border-top: 1px solid #DDDDDD;
+    margin-bottom: 0px;
+}
+
+ul#songList li
+{
+	background-color: white;
+	width: 100%;	
+	border-bottom: 1px solid #DDDDDD;
+}
+
+ul#songList li
+{
+	height: 80px;
+}
+
+.clipOuter
+{
+	width: 100%;
+	display: inline-block;
+	border-color: #DDDDDD;
+}
+
+.thumbnailContainer
+{
+	float: left;
+	width: 200px;
+	height: 100%
+}
+
+.clipInfoContainer
+{	
+	height: 100%;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.clipInfo
+{
+	padding-top: 20px;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+input
+{
+	text-align: center;
+}
+.timeAndDeleteControlsContainer {
+	float: right;
+	width: 200px;
+	height: 100%;
+}
+
+.start-seconds-container {
+	width: 60px;
+	height: 100%;
+	float: left;
+
+}
+
+.start-seconds-container input{
+	margin-left: 10px;
+	margin-top: 25px;
+	height: 30px;
+	width: 40px;
+	border: 0px;
+}
+
+.end-seconds-container input{
+	margin-left: 10px;
+	margin-top: 25px;
+	height: 30px;
+	width: 40px;
+	border: 0px;
+}
+
+.end-seconds-container {
+	margin-left: 60px;
+	margin-right: 80px;
+	height: 100%;
+}
+
+.delete-container {
+	width: 80px;
+	height: 100%;
+	float: right;
+	font-size: 30px;
+	display: none;
+}
+
+.delete-container span {
+	cursor: pointer;
+	font-size: 30px;
+	width: 10px;
+	height: 10px;
+
+}
+
+#participant-list span.glyphicon {
+	margin-top: 7;
+    font-size: 14px;
+    float: right;
+    margin-right: 18px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.thumbnail {
+	width: 100px;
+	height: 60px;
+	margin-top: 10px;
+	float: right;
+	padding: 0px;
+	border: 0px;
+	border-radius: 0px;
+	margin-right: 20px;
+}
+
+#right-panel {
+	width: 700px;
+	float: right;
+	background-color: white;
+}
+
+#left-panel {
+	width: 240px;
+	height: 500px;
+	float: left;
+}
+
+#details-panel {
+	width: 100%;
+	background-color: white;
+}
+
+#participants-panel {
+	margin-top: 20px;
+	background-color: white;
+}
+
+#owner-select {
+	margin-bottom: 0px;
+	display: inline;
+
+
+}
+
+#right-panel-header {
+	font-weight: bold;
+	height: 35px;
+	background-color: #FFCC66;
+}
+
+#right-panel-time-header {
+	width: 200px;
+	float: right;
+	height: 100%;
+}
+
+.time-header {
+	width: 60px;
+	float: left;
+	height: 100%;
+	text-align: center;
+	position: relative;
+
+	font-size: 12px !important;
+}
+
+#clipForm {
+	height: 120px;
+	position: relative;
+}
+
+#clip-add-controls {
+	position: absolute;
+	bottom: 0px;
+	right: 100px;
+}
+
+.time-header span {
+	left: 10px;
+	width: 40px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	display: block;
+}
+
+.ph-header {
+	height: 35px;
+	width: 100%;
+	background-color: #FFCC66;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-left: 15px;
+	display: table;
+}
+
+.ph-header-text {
+	margin-top: 6px;
+}
+
+textarea {
+	display: inline
+}
+
+#participant-input-container {	
+	height: 50px;
+	width: 100%;
+	border-bottom: 1px solid #DDDDDD;
+	position: relative;
+}
+
+#participant-input-container input {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 180px;
+	height: 30px;
+	text-align: left !important;
+	font-size: 1em;
+	padding-left: 10px
+}
+
+#participant-input-container span {
+	position: absolute;
+	top: 10px;
+	left: 200px;
+	font-size: 30px;
+	margin: 0px;
+	display: inline;
+	color: #FFCC66;
+}
+
+#participant-list {
+	padding-left: 0px;
+}
+
+#participant-list li {
+	padding-left: 20px;
+	font-weight: bold;
+	width: 100%;
+	height: 28px;
+	border-bottom: 1px solid #DDDDDD;
+	display: table;
+}
+
+#participant-list li div {
+	margin-top: 3px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+.index-container {
+	display: inline-block;
+	margin-left: 15px;
+	width: 50px;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 28px;
+	text-align: center;
+}
+
+#mix-options {
+	padding-left: 0px;
+}
+
+#mix-options li {
+	padding-left: 20px;
+	border-bottom: 1px solid #DDDDDD;
+	height: 28px;
+	display: table;
+	width: 100%;
+}
+
+#mix-options li div {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}

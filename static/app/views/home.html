@@ -1,0 +1,31 @@
+<div class="clipOuter">
+	<div class="thumbnailContainer">
+		<div class="index-container">{[ $index + 1]}</div>
+		<img class="thumbnail" ng-src="{[ clip.thumbnail ]}"></img>
+	</div>
+	<div class="timeAndDeleteControlsContainer">
+		<div class="start-seconds-container">
+			<input ng-model="clip.start" type="number"></input>
+		</div>
+		<div class="delete-container">
+			<span ng-click="deleteClip(clip)" class="glyphicon glyphicon-remove"></span>
+		</div>
+		<div class="end-seconds-container">
+			<input clip-end clip="clip" ng-model="clip.end" type="number"></input>
+		</div>
+	</input>
+	</div>
+	<div class="clipInfoContainer">
+		<div class="clipInfo">
+			<span ng-if="!showDetails">
+				{[ clip.url ]}
+			</span>
+		<span ng-if="showDetails">
+			{[ clip. title ]}
+		</span>
+			{[ clip.owner.username ]}
+		</div>
+	</div>
+</div>
+
+

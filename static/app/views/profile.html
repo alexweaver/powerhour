@@ -1,0 +1,13 @@
+<style>
+	body {
+		color: white;
+	}
+	button {
+		color: black;
+	}
+</style>
+<div main-nav></div>
+Your playlists
+<select ng-model="selectedPlaylist" ng-options="playlist.title for playlist in playlists"></select>
+<button ng-click="edit()">Edit</button>
+<button ng-click="play()">Play</button>

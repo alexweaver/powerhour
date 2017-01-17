@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+
+
+	<!-- Main Styles -->
+
+	<link rel="stylesheet" href="/static/public/styles/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/public/styles/main.css">
+
+
+
+	<!-- jQuery -->
+
+	<script src="/static/public/scripts/jquery.min.js"></script>
+	<script src="/static/public/scripts/jquery-ui.min.js"></script>
+	<script src="/static/public/scripts/bootstrap.min.js"></script>
+
+
+
+	<!-- Angular Modules -->
+
+	<script src="/static/app/system/angular.min.js"></script>
+	<script src="/static/app/system/angular-route.min.js"></script>
+	<script src="/static/app/system/angular-resource.min.js"></script>
+	<script src="/static/app/system/angular-messages.min.js"></script>
+	<script src="/static/app/system/angular-cookies.min.js"></script>
+
+
+
+	<!-- Angular Application -->
+
+	<script src="/static/app/app.js"></script>
+
+
+
+	<!-- Angular Controllers -->
+
+	<script src="/static/app/controllers/MainController.js"></script>
+	<script src="/static/app/controllers/RegisterController.js"></script>
+	<script src="/static/app/controllers/PlaylistController.js"></script>
+	<script src="/static/app/controllers/ProfileController.js"></script>
+	<script src="/static/app/controllers/PlayerController.js"></script>
+
+
+	<!-- Angular Models -->
+
+	<script src="/static/app/models/clip-model.js"></script>
+	<script src="/static/app/models/guest-model.js"></script>
+	<script src="/static/app/models/participant-model.js"></script>
+	<script src="/static/app/models/playlist-model.js"></script>
+	<script src="/static/app/models/user-model.js"></script>
+
+
+
+	<!-- Angular Services -->
+
+
+	<script src="/static/app/services/linkService.js"></script>
+	<script src="/static/app/services/UserService.js"></script>
+	<script src="/static/app/services/PlaylistService.js"></script>
+	<script src="/static/app/services/YoutubeService.js"></script>
+	<script src="/static/app/services/AuthService.js"></script>
+	<script src="/static/app/services/clipService.js"></script>
+
+
+
+	<!-- Angular Directives -->
+
+	<script src="/static/app/directives/AutoComplete.js"></script>
+	<script src="/static/app/directives/ClipArea.js"></script>
+	<script src="/static/app/directives/clipForm.js"></script>
+	<script src="/static/app/directives/mixTitle.js"></script>
+	<script src="/static/app/directives/Nav.js"></script>
+	<script src="/static/app/directives/titleForm.js"></script>
+	<script src="/static/app/directives/VideoClip.js"></script>
+	<script src="/static/app/directives/YoutubePlayer.js"></script>
+	<script src="/static/app/directives/user-delete-button.js"></script>
+	<script src="/static/app/directives/create-playlist-form.js"></script>
+
+
+
+</head>
+
+<body ng-app="PowerHourApp" ng-cloak>
+	<div id="container">
+		<div ng-view></div>
+	</div>
+</body>
+
+</html>

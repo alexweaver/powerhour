@@ -1,0 +1,17 @@
+<div main-nav></div>
+
+<style>
+	body {
+		color:white;
+		}
+	input {
+		color: black;
+	}
+</style>
+
+<form ng-submit="login(username, password)">
+	Username <input ng-model="username" name="username" type="text"></input>
+	Password <input ng-model="password" name="password" type="password"></input>
+	<input type="submit" value="Login"></input>
+</form>
+<label ng-model="warning"></label>

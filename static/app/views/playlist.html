@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="/static/public/styles/playlist.css">
+<div main-nav></div>
+<div class="subpage-container" ng-show='render'>
+
+	<form id="titleForm" name="titleForm" title-form playlist="playlist" novalidate >
+		<input validate-mix-title name="titleInput" id="title-input" type="text" ng-model="playlist.title" placeHolder="Enter Playlist Title"></input>
+	</form>
+
+	<div style="color:white" ng-messages="titleForm.titleInput.$error">
+		<div ng-message="minLength">Title too short</div>
+		<div ng-message="maxLength">Title too long</div>
+	</div>
+	
+	<div id="left-panel">
+		<div id="details-panel">
+			<div class="ph-header">
+				<div class="ph-header-text">Details</div>
+			</div>
+			<ul id="mix-options">
+				<li><div>show video details</div><input ng-model="showDetails" type="checkbox"></input></li>
+				<li><div>play full videos</div></li>
+				<li><div>default video length</div></li>
+				<li><div>total videos</div><div>{[ playlist.length ]}</div></li>
+				<li><div>total length</div><div>{[ playlist.totalDuration ]}</div></li>
+			</ul>
+		</div>
+		<div id="participants-panel">
+			<div class="ph-header">
+				<div class="ph-header-text">
+					Participants
+				</div>
+			</div>
+			<div id="participant-input-container">
+				<input type="text" id="editors" auto-complete playlist="playlist" placeHolder="add participants"></input>
+				<span class="glyphicon glyphicon-plus-sign"></span>
+			</div>
+			<ul id="participant-list">
+				<li ng-repeat="user in playlist.users">
+					<div>{[ user.username ]}</div>
+					<input type="button" user-delete-button playlist="playlist" user="user"></input>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="right-panel">
+		<div id="right-panel-header" class="ph-header">
+			<div id="right-panel-time-header">
+				<div class="time-header">
+					<span>Start</span>
+				</div>
+				<div class="time-header">
+					<span>End</span>
+				</div>
+			</div>
+			<div class="ph-header-text">
+				Song List
+			</div>
+		</div>
+
+<form id="clipForm" name="clipForm" clip-form playlist="playlist" owner="owner">
+	<textarea id="link-area" name="links" placeHolder="add links" rows="5" resizeable="false" clip-area ng-model="links"></textarea>
+	
+	<div id="clip-add-controls">
+		<div ng-messages="clipForm.$error" role="alert">
+			<div ng-message="links">Invalid link format</div>
+		</div>
+		<select ng-model="owner" ng-options="user.username group by user.role for user in playlist.users"></select>
+		<input id="add-button" type="submit" value="Add"></input>
+	</div>
+</form>
+
+		<ul id="songList">
+			<li ng-repeat="clip in playlist.clips track by $index" video-clip="clip" index="{[ $index ]}"></li>
+		</ul>
+	</div>
+</div>

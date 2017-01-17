@@ -1,0 +1,16 @@
+<textarea id="link-area" ng-model="clipLinks" placeHolder="add links" rows="5" resizeable=false></textarea>
+
+<select id="owner-select" ng-model="selectedUser">
+	<optgroup label="Participants">
+		<option ng-repeat="participant in playlist.participants" value="{[ participant ]}">
+			{[ participant.username ]}
+		</option>
+	</optgroup>
+	<optgroup label="Guests">
+		<option ng-repeat="guest in playlist.guests" value="{[ guest ]}">
+			{[ guest ]}
+		</option>
+	</optgroup>
+</select>
+
+<input id="add-button" type="button" ng-click="addClips(selectedUser, clipLinks)" value="Add"></input>
